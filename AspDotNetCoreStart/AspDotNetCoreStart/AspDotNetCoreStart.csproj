@@ -18,6 +18,7 @@
     <Folder Include="Src\css\" />
     <Folder Include="Src\d.ts\" />
     <Folder Include="Src\js\" />
+    <Folder Include="Src\img\" />
   </ItemGroup>
 
 </Project>

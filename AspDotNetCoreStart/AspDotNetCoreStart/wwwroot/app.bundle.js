@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/bootstrap/dist/css/bootstrap.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!*****************************************************************************************************!*\
   !*** delegated ./node_modules/jquery/dist/jquery.js from dll-reference vendor_f25a97eae07f649e19b0 ***!
@@ -108,6 +119,17 @@ module.exports = (__webpack_require__(/*! dll-reference vendor_f25a97eae07f649e1
 
 /***/ }),
 
+/***/ "./src/img/core2.0.png":
+/*!*****************************!*\
+  !*** ./src/img/core2.0.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "/image/core2.0.png";
+
+/***/ }),
+
 /***/ "./src/ts/app.ts":
 /*!***********************!*\
   !*** ./src/ts/app.ts ***!
@@ -123,12 +145,13 @@ module.exports = (__webpack_require__(/*! dll-reference vendor_f25a97eae07f649e1
 //! license : MIT
 //! date    : Q1-2019
 Object.defineProperty(exports, "__esModule", { value: true });
-// styles (bundling by webpack)
-//import "../../../img/ima.png";
-//import "../../../img/nuyttensbackground.svg";
+__webpack_require__(/*! ../img/core2.0.png */ "./src/img/core2.0.png");
 __webpack_require__(/*! ../css/site.css */ "./src/css/site.css");
-$('body')
+__webpack_require__(/*! ../../node_modules/bootstrap/dist/css/bootstrap.css */ "./node_modules/bootstrap/dist/css/bootstrap.css");
+$('main')
     .append('<p>JQuery loaded</p>');
+$('main')
+    .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
 //alert('test');f
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

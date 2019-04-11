@@ -10,16 +10,12 @@
     </environment>
 </head>
 <body>
-    <header>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <header></header>
+    <main role="main" class="container">
+        @RenderBody()
+    </main>
 
-    <footer class="border-top footer text-muted">
-    </footer>
+    <footer class="border-top footer text-muted"></footer>
 
     <environment names="Development,Staging,Production">
         <script src="~/lib.vendor1.bundle.js"></script>

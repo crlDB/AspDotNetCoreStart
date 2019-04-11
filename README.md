@@ -1,6 +1,6 @@
 ## AspDotNetCoreStart
 
-### node configuration file - package.json
+### Node configuration file - package.json
 
 ```
 {
@@ -26,7 +26,7 @@
 
 
 
-### webpack configuration file - webpack.config.js
+### Webpack configuration file - webpack.config.js
 
 
 ```
@@ -154,7 +154,7 @@ module.exports = [
 ```
 
 
-### typescript configuration file - tsconfig.json
+### Typescript configuration file - tsconfig.json
 
 ```
 {
@@ -176,7 +176,7 @@ module.exports = [
 }
 ``` 
 
-### source folder
+### Source folder
 
 * Scr
 * Scr/css
@@ -185,9 +185,52 @@ module.exports = [
 
 
 
-### typescript start
+### Typescript start
 
-### add tpes (d.ts)
+```
+//! App
+//! version : 1.0.0
+//! author  : De Bels Carl
+//! license : MIT
+//! date    : Q1-2019
+
+import "../css/site.css";
+
+
+$('body')
+    .append('<p>JQuery loaded</p>');
+```
+
+### Types (d.ts-files)
+
+```
+  "dependencies": {
+    "@types/jquery": "3.3.29",
+    "@types/bootstrap": "4.3.0",
+    "jquery": "3.4.0",
+    "bootstrap": "4.3.1",
+    "popper.js": "1.15.0"
+  }
+```
+
+
+### Css
+
+* webpack > css-loader
+* typescript
+```
+import "../css/site.css";
+import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+```
+
+
+### Images
+
+* webpack > file-loader
+* typescript
+```
+import "../img/core2.0.png";
+```
 
 
 

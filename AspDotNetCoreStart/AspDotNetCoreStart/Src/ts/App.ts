@@ -4,16 +4,16 @@
 //! license : MIT
 //! date    : Q1-2019
 
-// styles (bundling by webpack)
-//import "../../../img/ima.png";
-//import "../../../img/nuyttensbackground.svg";
-
-
+import "../img/core2.0.png";
 import "../css/site.css";
+import "../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 
-$('body')
+$('main')
     .append('<p>JQuery loaded</p>');
+
+$('main')
+    .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
 
 
 
