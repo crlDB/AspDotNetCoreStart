@@ -185,15 +185,11 @@ module.exports = [
 * Src/ts
 * Src/img
 
-
-
-
 ### Typescript start
 
 ```
 
 ```
-
 
 ### Types (d.ts-files)
 
