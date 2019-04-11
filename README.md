@@ -1,2 +1,4 @@
 # AspDotNetCoreStart
-asp/vore/npm/webpack/typescript
+
+* add npm-configuration-file
+* ![ima](./readme/npm.png)
