@@ -1,41 +1,4 @@
-## AspDotNetCoreStart
-
-### node configuration file - package.json
-
-![alt tag](https://user-images.githubusercontent.com/11835474/55938780-6ee7f800-5c3c-11e9-9fd4-6b7e81c63947.PNG)
-* add packages
-* package installed in folder **dependencies/npm**
-
-```
-{
-  "version": "1.0.0",
-  "name": "asp.net",
-  "private": true,
-  "devDependencies": {
-    "webpack": "4.29.6",
-    "webpack-cli": "^3.3.0",
-    "mini-css-extract-plugin": "0.5.0",
-    "hard-source-webpack-plugin": "0.13.1",
-    "ts-loader": "5.3.3",
-    "typescript": "3.4.3",
-    "css-loader": "2.1.1"
-  },
-  "dependencies": {
-    "jquery": "3.4.0",
-    "bootstrap": "4.3.1",
-    "popper.js": "1.15.0"
-  }
-}
-```
-
-
-
-### webpack configuration file - webpack.config.js
-
-* add webpack-configuration-file
-
-```
-/// -----------------------------------------------------------------
+﻿/// -----------------------------------------------------------------
 /// webpack.dev.bat     -> bundle app for development
 /// webpack.prod.bat    -> bundle app for production
 /// webpack.vendor.bat  -> bundle vendor-lib for production
@@ -156,47 +119,5 @@ module.exports = [
         ]
     }
 ];
-```
-
-
-### typescript configuration file - tsconfig.json
-
-* add typescript-configuration-file
-
-```
-{
-  "compilerOptions": {
-    "sourceMap": true,
-    "target": "es5",
-    "moduleResolution": "node",
-    "rootDir": "./src/ts",
-    "outDir": "./src/js",
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false
-  },
-  "compileOnSave": false,
-  "exclude": [
-    "node_modules",
-    "wwwroot"
-  ]
-}
-``` 
-
-### source folder
-
-* Scr
-* Scr/css
-* Scr/js
-* Src/ts
-
-
-
-### typescript start
-
-
-
-
-
 
 
