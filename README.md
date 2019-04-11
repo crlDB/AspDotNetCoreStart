@@ -2,10 +2,6 @@
 
 ### node configuration file - package.json
 
-![alt tag](https://user-images.githubusercontent.com/11835474/55938780-6ee7f800-5c3c-11e9-9fd4-6b7e81c63947.PNG)
-* add packages
-* package installed in folder **dependencies/npm**
-
 ```
 {
   "version": "1.0.0",
@@ -32,7 +28,6 @@
 
 ### webpack configuration file - webpack.config.js
 
-* add webpack-configuration-file
 
 ```
 /// -----------------------------------------------------------------
@@ -160,8 +155,6 @@ module.exports = [
 
 
 ### typescript configuration file - tsconfig.json
-
-* add typescript-configuration-file
 
 ```
 {
