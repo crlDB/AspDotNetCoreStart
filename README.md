@@ -187,7 +187,7 @@ module.exports = [
 
 ### typescript start
 
-
+### add tpes (d.ts)
 
 
 
