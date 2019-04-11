@@ -251,9 +251,6 @@ module.exports = [
 * packages.json
 ```
     {
-      "version": "1.0.0",
-      "name": "asp.net",
-      "private": true,
       "devDependencies": {
         "mini-css-extract-plugin": "0.5.0",
         "css-loader": "2.1.1"
@@ -282,9 +279,6 @@ module.exports = [
 * packages.json
 ```
     {
-      "version": "1.0.0",
-      "name": "asp.net",
-      "private": true,
       "devDependencies": {
         "file-loader": "3.0.1"
       }
@@ -368,7 +362,12 @@ $('main')
     .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
 ```
 
-
-
-
-
+### Bundle
+* open cmd in root-dir
+* bundle lib-vendor (webpack.vendor.bat)
+* > webpack --mode production --config-name vendor --progress --color
+* bundle app for development (webpack.dev.bat)
+* > webpack --mode development --config-name app --progress --color --watch
+* bundle app for production (webpack.prod.bat)
+* > webpack --mode production --config-name app --progress --color --watch
+  
