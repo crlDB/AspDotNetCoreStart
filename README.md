@@ -365,9 +365,9 @@ $('main')
 ### Bundle
 * open cmd in root-dir
 * bundle lib-vendor (webpack.vendor.bat)
-* > webpack --mode production --config-name vendor --progress --color
+> webpack --mode production --config-name vendor --progress --color
 * bundle app for development (webpack.dev.bat)
-* > webpack --mode development --config-name app --progress --color --watch
+> webpack --mode development --config-name app --progress --color --watch
 * bundle app for production (webpack.prod.bat)
-* > webpack --mode production --config-name app --progress --color --watch
+> webpack --mode production --config-name app --progress --color --watch
   
