@@ -139,7 +139,7 @@ module.exports = __webpack_require__.p + "/image/core2.0.png";
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function($) {
-//! WebHmi
+//! App
 //! version : 1.0.0
 //! author  : De Bels Carl
 //! license : MIT
@@ -152,7 +152,6 @@ $('main')
     .append('<p>JQuery loaded</p>');
 $('main')
     .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
-//alert('test');f
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 

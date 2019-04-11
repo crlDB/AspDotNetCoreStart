@@ -14,17 +14,19 @@
     "hard-source-webpack-plugin": "0.13.1",
     "ts-loader": "5.3.3",
     "typescript": "3.4.3",
-    "css-loader": "2.1.1"
+    "css-loader": "2.1.1",
+    "file-loader": "3.0.1"
   },
   "dependencies": {
+    "@types/jquery": "3.3.29",
+    "@types/bootstrap": "4.3.0",
     "jquery": "3.4.0",
     "bootstrap": "4.3.1",
     "popper.js": "1.15.0"
   }
 }
+
 ```
-
-
 
 ### Webpack configuration file - webpack.config.js
 
@@ -153,7 +155,6 @@ module.exports = [
 ];
 ```
 
-
 ### Typescript configuration file - tsconfig.json
 
 ```
@@ -182,54 +183,189 @@ module.exports = [
 * Scr/css
 * Scr/js
 * Src/ts
+* Src/img
+
 
 
 
 ### Typescript start
 
 ```
-//! App
-//! version : 1.0.0
-//! author  : De Bels Carl
-//! license : MIT
-//! date    : Q1-2019
 
-import "../css/site.css";
-
-
-$('body')
-    .append('<p>JQuery loaded</p>');
 ```
+
 
 ### Types (d.ts-files)
 
 ```
   "dependencies": {
     "@types/jquery": "3.3.29",
-    "@types/bootstrap": "4.3.0",
-    "jquery": "3.4.0",
-    "bootstrap": "4.3.1",
-    "popper.js": "1.15.0"
+    "@types/bootstrap": "4.3.0"
   }
 ```
 
+### Webpack Typescript-loader
 
-### Css
-
-* webpack > css-loader
-* typescript
+* packages.json
 ```
-import "../css/site.css";
+    {
+      "devDependencies": {
+        "ts-loader": "5.3.3",
+        "typescript": "3.4.3"
+      }
+    }
+```
+* webpack.config.js > rules
+```
+    rules: [
+        {
+            test: /\.tsx?$/,
+            loader: 'ts-loader',
+            exclude: /node_modules/
+        },
+```
+* webpack.config.js > entry 
+```
+    entry: {
+        "app": './src/ts/app.ts'
+    }
+```
+* app.ts
+```
+    import "../img/core2.0.png";
+    import "../css/site.css";
+    import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+
+    $('main')
+        .append('<p>JQuery loaded</p>');
+
+    $('main')
+        .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
+
+    .....
+```
+
+### Webpack Css-loader
+
+* packages.json
+```
+    {
+      "version": "1.0.0",
+      "name": "asp.net",
+      "private": true,
+      "devDependencies": {
+        "mini-css-extract-plugin": "0.5.0",
+        "css-loader": "2.1.1"
+      }
+    }
+```
+* webpack.config.js
+```
+    rules: [
+        {
+            test: /\.css$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                "css-loader"
+            ]
+        }
+```
+* app.ts
+```
+    import "../css/site.css";
+    import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+```
+
+### webpack file-loader (Images)
+
+* packages.json
+```
+    {
+      "version": "1.0.0",
+      "name": "asp.net",
+      "private": true,
+      "devDependencies": {
+        "file-loader": "3.0.1"
+      }
+    }
+```
+* webpack.config.js
+```
+    rules: [
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: [
+                'file-loader?name=/image/[name].[ext]'
+            ]
+        },
+```
+* app.ts
+```
+    import "../img/core2.0.png";
+```
+
+### Jquery
+* packages.json
+```
+    {
+      "dependencies": {
+        "@types/jquery": "3.3.29",
+        "jquery": "3.4.0"
+        }
+    }
+```
+* webpack.config.js > lib vendor
+```
+    entry: {
+        "lib.vendor1": [
+            'jquery',
+            'bootstrap'             
+        ]
+```
+* webpack.config.js > make jquery global
+```
+    plugins: [
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            $: 'jquery',
+            'window.jQuery': 'jquery',
+            'window.$': 'jquery'
+        }),
+```
+* app.ts
+```
+    $('main')
+        .append('<p>JQuery loaded</p>');
+
+    ....
+```
+
+### Bootstrap
+* packages.json
+```
+    {
+      "dependencies": {
+        "@types/bootstrap": "4.3.0",
+        "bootstrap": "4.3.1",
+        "popper.js": "1.15.0"
+        }
+    }
+```
+* webpack.config.js > lib vendor
+```
+    entry: {
+        "lib.vendor1": [
+            'jquery',
+            'bootstrap'             
+        ]
+```
+* app.ts
+```
 import "../../node_modules/bootstrap/dist/css/bootstrap.css";
-```
 
-
-### Images
-
-* webpack > file-loader
-* typescript
-```
-import "../img/core2.0.png";
+$('main')
+    .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
 ```
 
 

@@ -1,4 +1,4 @@
-﻿//! WebHmi
+﻿//! App
 //! version : 1.0.0
 //! author  : De Bels Carl
 //! license : MIT
@@ -14,23 +14,3 @@ $('main')
 
 $('main')
     .append('<button type="button" class="btn btn-primary">Bootstrap loaded</button>');
-
-
-
-
-//alert('test');f
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

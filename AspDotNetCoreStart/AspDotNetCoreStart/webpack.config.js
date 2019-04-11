@@ -16,7 +16,7 @@ var webpack = require('webpack');
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
-
+    
 module.exports = [
     {
         name: 'vendor',
