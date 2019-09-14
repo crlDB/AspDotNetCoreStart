@@ -3,12 +3,12 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
-    "webpack": "4.39.1",
-    "webpack-cli": "3.3.6",
+    "webpack": "4.40.2",
+    "webpack-cli": "3.3.8",
     "mini-css-extract-plugin": "0.8.0",
     "hard-source-webpack-plugin": "0.13.1",
-    "ts-loader": "6.0.4",
-    "typescript": "3.5.3",
+    "ts-loader": "6.1.0",
+    "typescript": "3.6.3",
     "css-loader": "3.2.0",
     "file-loader": "4.2.0"
   },
