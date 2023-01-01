@@ -3,14 +3,14 @@
   "name": "asp.net",
   "private": true,
   "devDependencies": {
-    "webpack": "4.40.2",
-    "webpack-cli": "3.3.8",
-    "mini-css-extract-plugin": "0.8.0",
+    "webpack": "5.75.0",
+    "webpack-cli": "5.0.1",
+    "mini-css-extract-plugin": "2.7.2",
     "hard-source-webpack-plugin": "0.13.1",
-    "ts-loader": "6.1.0",
+    "ts-loader": "9.4.2",
     "typescript": "3.6.3",
-    "css-loader": "3.2.0",
-    "file-loader": "4.2.0"
+    "css-loader": "6.7.3",
+    "file-loader": "6.2.0"
   },
   "dependencies": {
     "@types/jquery": "3.3.31",
